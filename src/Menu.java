@@ -16,9 +16,11 @@ public class Menu
                 switch (supportMethods.theBeginningOfTheLine(string))
                 {
                     case "$ cat":
-                        CommandCat commandCat = new CommandCat();
-                        commandCat.get_command(string);
-                        commandCat.parseCommand();
+                        CommandCat commandCat = new CommandCat(string);
+                        if (commandCat.CommandIsGood())
+                            commandCat.parseCommand();
+                        else
+                            System.out.println("Неправильно введена команда!");
                         break;
                     case "$ ls":
 
