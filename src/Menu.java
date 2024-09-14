@@ -1,20 +1,16 @@
 import java.util.Scanner;
 
-public class Menu
-{
-    public void mainMenu()
-    {
-        boolean flag = true;
+public class Menu {
+    public void mainMenu() {
+        boolean isNotExit = true;
         Scanner input = new Scanner(System.in);
         SupportMethods supportMethods = new SupportMethods();
-        while (flag)
-        {
+
+        while (isNotExit) {
             String string = input.nextLine();
 
-            if (supportMethods.IsCommand(string))
-            {
-                switch (supportMethods.theBeginningOfTheLine(string))
-                {
+            if (supportMethods.IsCommand(string)) {
+                switch (supportMethods.theBeginningOfTheLine(string)) {
                     case "$ cat":
                         CommandCat commandCat = new CommandCat(string);
                         if (commandCat.CommandIsGood())
@@ -26,7 +22,7 @@ public class Menu
 
                         break;
                     case "exit":
-                        flag = false;
+                        isNotExit = false;
                         break;
                 }
             }
