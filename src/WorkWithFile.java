@@ -4,9 +4,16 @@ import java.util.List;
 
 public class WorkWithFile {
     File file;
+    int lineNumber;
     boolean flagAlreadyHaveEmptyLine;
 
-    WorkWithFile(File file) { this.file = file; }
+    WorkWithFile(File file, int lineNumber) {
+        this.file = file;
+        this.lineNumber = lineNumber;
+    }
+    public int getLineNumber() {
+        return lineNumber;
+    }
     public boolean checkFile() {
         return file.exists() && file.isFile();
     }
@@ -68,7 +75,7 @@ public class WorkWithFile {
             PrintWithoutOption();
             return;
         }
-        int lineNumber = 1;
+
         StringBuilder content = new StringBuilder();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {

@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
@@ -33,7 +32,7 @@ public class CommandCat {
 
 
         if (parts.length > 2) {
-            WorkWithFile file = new WorkWithFile(new File(parts[2] + ".txt"));
+            WorkWithFile file = new WorkWithFile(new File(parts[2] + ".txt"), 1);
 
             if (isOption(parts[2])) {
                 option = parts[2];
@@ -43,6 +42,7 @@ public class CommandCat {
             }
         }
 
+        int lineNumber = 1;
         for (int i = option==null ? 2 : 3; i < parts.length; ++i) {
             if (Objects.equals(parts[i], "-")) {
                 Scanner input = new Scanner(System.in);
@@ -58,7 +58,7 @@ public class CommandCat {
                 }
             } else {
                 File source_file = new File(parts[i] + ".txt");
-                WorkWithFile workWithFile = new WorkWithFile(source_file);
+                WorkWithFile workWithFile = new WorkWithFile(source_file, lineNumber);
                 if (workWithFile.checkFile()) {
                     workWithFile.print(option);
                     workWithFile.fileToStringBuilder(contentToWrite);
@@ -66,6 +66,7 @@ public class CommandCat {
                     System.out.println("НЕТ ТАКОГО ФАЙЛА РЕСУРСОВ!");
                     return;
                 }
+                lineNumber = workWithFile.getLineNumber();
             }
 
         }
