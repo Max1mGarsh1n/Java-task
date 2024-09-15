@@ -24,8 +24,7 @@ public class WorkWithFile {
             for (String line : lines) {
                 stringBuilder.append(line).append(System.lineSeparator());
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.err.println("Ошибка при чтении файла: " + e.getMessage());
         }
     }
@@ -36,8 +35,7 @@ public class WorkWithFile {
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.err.println("Ошибка при чтении файла " + file.getName() + ": " + e.getMessage());
         }
     }
@@ -106,8 +104,7 @@ public class WorkWithFile {
                         break;
                 }
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.err.println("Ошибка при чтении файла " + file.getName() + ": " + e.getMessage());
         }
         System.out.println(content);
