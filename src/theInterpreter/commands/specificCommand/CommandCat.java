@@ -26,7 +26,7 @@ public class CommandCat extends AbstractCommand {
             return false;
         }
         if (moreThanIndex != args.size() - 2 || Collections.frequency(args, ">") > 1) {
-            throw new Exception("Знак '>' должен быть отсутствовать или стоять предпоследним, но встречаться только один раз");
+            throw new Exception("Знак '>' должен отсутствовать или стоять предпоследним, но встречаться только один раз");
         }
         return true;
     }
