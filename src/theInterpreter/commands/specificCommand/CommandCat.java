@@ -2,7 +2,8 @@ package theInterpreter.commands.specificCommand;
 
 import theInterpreter.commands.AbstractCommand;
 
-import java.io.*;
+import java.io.File;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;

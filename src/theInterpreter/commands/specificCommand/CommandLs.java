@@ -2,7 +2,10 @@ package theInterpreter.commands.specificCommand;
 
 import theInterpreter.commands.AbstractCommand;
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class CommandLs extends AbstractCommand {
     private List<String> keys = new ArrayList<>();

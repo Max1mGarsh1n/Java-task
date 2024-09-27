@@ -1,7 +1,11 @@
 package theInterpreter.commands.specificCommand;
 
 import theInterpreter.commands.AbstractCommand;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 public class CommandHelp extends AbstractCommand {
     private final Map<String, AbstractCommand> mapOfCommands;
