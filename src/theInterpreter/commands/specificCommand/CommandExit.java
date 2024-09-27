@@ -1,7 +1,6 @@
-package TheInterpreter.Commands.SpecificCommand;
+package theInterpreter.commands.specificCommand;
 
-import TheInterpreter.Commands.AbstractCommand;
-
+import theInterpreter.commands.AbstractCommand;
 import java.util.List;
 
 public class CommandExit extends AbstractCommand {

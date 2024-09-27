@@ -1,12 +1,12 @@
-package TheInterpreter;
+package theInterpreter;
 
-import TheInterpreter.Commands.AbstractCommand;
-import TheInterpreter.Commands.ProcessingTheEnteredCommand.InputCommand;
-import TheInterpreter.Commands.ProcessingTheEnteredCommand.Separator;
-import TheInterpreter.Commands.SpecificCommand.CommandCat;
-import TheInterpreter.Commands.SpecificCommand.CommandExit;
-import TheInterpreter.Commands.SpecificCommand.CommandHelp;
-import TheInterpreter.Commands.SpecificCommand.CommandLs;
+import theInterpreter.commands.AbstractCommand;
+import theInterpreter.commands.processingTheEnteredCommand.InputCommand;
+import theInterpreter.commands.processingTheEnteredCommand.Separator;
+import theInterpreter.commands.specificCommand.CommandCat;
+import theInterpreter.commands.specificCommand.CommandExit;
+import theInterpreter.commands.specificCommand.CommandHelp;
+import theInterpreter.commands.specificCommand.CommandLs;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package TheInterpreter.Commands.SpecificCommand;
+package theInterpreter.commands.specificCommand;
 
-import TheInterpreter.Commands.AbstractCommand;
+import theInterpreter.commands.AbstractCommand;
 import java.util.*;
 
 public class CommandHelp extends AbstractCommand {

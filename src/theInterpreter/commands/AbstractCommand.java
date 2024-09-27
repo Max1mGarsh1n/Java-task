@@ -1,4 +1,4 @@
-package TheInterpreter.Commands;
+package theInterpreter.commands;
 
 import java.util.HashMap;
 import java.util.List;

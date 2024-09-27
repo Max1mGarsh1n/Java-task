@@ -1,4 +1,4 @@
-package TheInterpreter.Commands.ProcessingTheEnteredCommand;
+package theInterpreter.commands.processingTheEnteredCommand;
 
 import java.util.List;
 

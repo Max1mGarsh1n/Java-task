@@ -1,4 +1,4 @@
-import TheInterpreter.Application;
+import theInterpreter.Application;
 
 public class Main
 {

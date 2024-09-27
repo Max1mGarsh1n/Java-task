@@ -1,6 +1,6 @@
-package TheInterpreter.Commands.SpecificCommand;
+package theInterpreter.commands.specificCommand;
 
-import TheInterpreter.Commands.AbstractCommand;
+import theInterpreter.commands.AbstractCommand;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -69,7 +69,7 @@ public class CommandCat extends AbstractCommand {
         return line;
     }
 
-    public void printArgsToStringBuilder(int size, PrintWriter output) throws Exception {
+    public void printArgsWithKeys(int size, PrintWriter output) {
         StringBuilder stringBuilder = new StringBuilder();
         int lineNumber = 1;
 
@@ -108,7 +108,7 @@ public class CommandCat extends AbstractCommand {
             PrintWriter receiverFile = isValidMoreThanSign
                     ? new PrintWriter(args.getLast() + ".txt")
                     : new PrintWriter(System.out);
-            printArgsToStringBuilder(isValidMoreThanSign ? args.size() - 2 : args.size(), receiverFile);
+            printArgsWithKeys(isValidMoreThanSign ? args.size() - 2 : args.size(), receiverFile);
         }
     }
 
